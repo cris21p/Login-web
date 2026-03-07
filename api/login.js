@@ -19,3 +19,11 @@ module.exports = async (req, res) => {
     res.status(405).json({ message: 'Método no permitido' });
   }
 };
+
+
+
+
+
+
+
+
