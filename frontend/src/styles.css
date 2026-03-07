@@ -1,0 +1,199 @@
+/* Copiado desde styles.css original */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.pt-sw{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.login{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form-container{
+    display: flex;
+    width: 370px;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #22222297;
+    padding: 30px;
+    border-radius: 13px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.622);
+}
+
+h1{
+    margin-bottom: 20px;
+    font-family: monospace;
+    color: #3e98bf;
+}
+
+h1 a{
+    text-decoration: none;
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-family: monospace;
+    color: #3e98bf;
+}
+
+form{
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input.ct, input.pd {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.contra, .password {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.remember-me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.remember-me a{
+    text-decoration: none;
+    font-size: 17px;
+    color: #3e98bf;
+    margin-top: 5px;
+}
+
+.remember-me a:hover{
+    text-decoration: underline;
+}
+
+.crear{
+    margin-top: 10px;
+    font-size: 18px;
+    color: #3e98bf;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: Arial, sans-serif;
+}
+
+.crear:hover{
+    text-decoration: underline;
+}
+
+.bt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 18px;
+    background-color: #3e98bf;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.bt:hover{
+    background-color: #357a9e;
+}
+
+.register{
+    display: none;
+    width: 370px;
+    height: auto;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    border: 1px solid #2222225a;
+    padding: 20px;
+    border-radius: 13px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.622);
+}
+
+.log{
+    margin-top: 10px;
+    font-size: 17px;
+    color: #3e98bf;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: Arial, sans-serif;
+}
+
+.log:hover{
+    text-decoration: underline;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: monospace;
+    color: #3e98bf;
+}
+
+h2 a{
+    text-decoration: none;
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-family: monospace;
+    color: #3e98bf;
+}
+
+.fecha{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    color: #2222229f;
+}
+
+.register .bt{
+    width: 100%;
+    background-color: #3e98bf;
+}
+
+.register .bt:hover{
+    background-color: #357a9e;
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid #3e98bf;
+    box-shadow: 0 0 5px rgba(62, 152, 191, 0.5);
+}
+
+button:focus{
+    outline: none;
+}
