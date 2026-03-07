@@ -69,7 +69,7 @@ export default function LoginPage() {
     const contraseña = form.contraseña.value;
     const fecha_de_nacimiento = form.fecha_de_nacimiento.value;
     try {
-      const res = await fetch('http://localhost:4000/register', {
+      const res = await fetch('/api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ correo, contraseña, fecha_de_nacimiento })
