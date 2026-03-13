@@ -2,8 +2,8 @@
   "name": "login-web-root",
   "private": true,
   "workspaces": [
-    "frontend",
-    "api"
+    "api",
+    "frontend"
   ]
 }
 
