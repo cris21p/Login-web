@@ -32,12 +32,14 @@ export default function LoginPage() {
 
   const handleShowRegister = () => {
     setShowRegister(true);
+    setShowPasswordLogin(false);
     setRegisterMessage('');
     setLoginMessage('');
   };
 
   const handleShowLogin = () => {
     setShowRegister(false);
+    setShowPasswordRegister(false);
     setRegisterMessage('');
     setLoginMessage('');
   };
@@ -108,13 +110,13 @@ export default function LoginPage() {
           <label className="form-check-label" htmlFor="checkNativeSwitch"></label>
         </div>
         {!showRegister ? (
-          <div className="form-container">
+          <div className="form-container" key="login-form">
             <h1 style={{ textAlign: 'center' }}>
               <a href="index.html">Login-Wed</a>
             </h1>
-            <form onSubmit={handleLoginSubmit}>
+            <form onSubmit={handleLoginSubmit} autoComplete="on">
                 <div style={{ position: 'relative', width: '220px', margin: '0 auto', paddingBottom: '0px', height: '50px' }}>
-                    <input className="contra ct" type="text" id="username" name="username" placeholder="Username" required />
+                    <input className="contra ct" type="text" id="username" name="username" placeholder="Username" autoComplete="username" required />
                 </div>
               <br />
               <div style={{ position: 'relative', width: '220px', margin: '0 auto' }}>
@@ -125,6 +127,7 @@ export default function LoginPage() {
                   name="password"
                   required
                   placeholder="Password"
+                  autoComplete="current-password"
                   style={{ width: '100%' }}
                 />
                 <button
@@ -154,13 +157,13 @@ export default function LoginPage() {
             </form>
           </div>
         ) : (
-          <div className="register" style={{ display: 'flex' }}>
+          <div className="register" key="register-form" style={{ display: 'flex' }}>
             <h2>
               <a href="index.html">login-Wed</a>
             </h2>
-            <form onSubmit={handleRegisterSubmit}>
+            <form onSubmit={handleRegisterSubmit} autoComplete="on">
                 <div style={{ position: 'relative', width: '220px', margin: '0 auto' }} >
-                    <input className="contra" type="email" id="correo" required name="correo" placeholder="Correo" />
+                    <input className="contra" type="email" id="correo" required name="correo" placeholder="Correo" autoComplete="email" />
                 </div>
               <div style={{ position: 'relative', width: '220px', margin: '0 auto' }}>
                 <input
@@ -170,6 +173,7 @@ export default function LoginPage() {
                   required
                   name="contraseña"
                   placeholder="Contraseña"
+                  autoComplete="new-password"
                   style={{ width: '100%' }}
                 />
                 <button
@@ -183,7 +187,7 @@ export default function LoginPage() {
                 </button>
               </div>
                 <div style={{ position: 'relative', width: '220px', margin: '0 auto' }}>
-                    <input className="fecha" type="date" id="fecha_de_nacimiento" required name="fecha_de_nacimiento" placeholder="Fecha de Nacimiento"/>
+                    <input className="fecha" type="date" id="fecha_de_nacimiento" required name="fecha_de_nacimiento" autoComplete="bday" placeholder="Fecha de Nacimiento"/>
                 </div>
               <div className="remember-me">
                 <button className="log" type="button" onClick={handleShowLogin}>
