@@ -2,7 +2,7 @@
   "name": "login-web-root",
   "private": true,
   "scripts": {
-    "build": "npm run build --workspace frontend"
+    "build": "node scripts/build-vercel.mjs"
   },
   "workspaces": [
     "frontend",
