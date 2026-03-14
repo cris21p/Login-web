@@ -1,4 +1,4 @@
-import { pool } from './_lib/db.js';
+import { ensureUserTable, getPool } from './_lib/db.js';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -12,6 +12,9 @@ export default async function handler(req, res) {
   }
 
   try {
+    await ensureUserTable();
+
+    const pool = getPool();
     const result = await pool.query(
       'SELECT id, email, password, fecha_de_nacimiento, "createdAt" FROM "User" WHERE email = $1 LIMIT 1',
       [username]
@@ -33,6 +36,12 @@ export default async function handler(req, res) {
       }
     });
   } catch (error) {
-    return res.status(500).json({ message: 'Error al iniciar sesion' });
+    console.error('login error', error);
+
+    if (error.code === '28P01' || error.code === '3D000') {
+      return res.status(500).json({ message: 'Error de conexion a la base de datos' });
+    }
+
+    return res.status(500).json({ message: error.message || 'Error al iniciar sesion' });
   }
 }
