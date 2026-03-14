@@ -2,6 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
 import './styles.css';
 
+const apiBaseUrl = '/api';
+
 export default function LoginPage() {
   const [darkMode, setDarkMode] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
@@ -45,7 +47,7 @@ export default function LoginPage() {
     const username = form.username.value;
     const password = form.password.value;
     try {
-      const res = await fetch('http://localhost:4000/login', {
+      const res = await fetch(`${apiBaseUrl}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password })
@@ -69,7 +71,7 @@ export default function LoginPage() {
     const contraseña = form.contraseña.value;
     const fecha_de_nacimiento = form.fecha_de_nacimiento.value;
     try {
-      const res = await fetch('/api/register', {
+      const res = await fetch(`${apiBaseUrl}/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ correo, contraseña, fecha_de_nacimiento })

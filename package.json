@@ -1,9 +1,12 @@
 {
   "name": "login-web-root",
   "private": true,
+  "scripts": {
+    "build": "npm --prefix frontend run build"
+  },
   "workspaces": [
-    "api",
-    "frontend"
+    "frontend",
+    "backend"
   ]
 }
 
