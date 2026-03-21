@@ -23,7 +23,8 @@ body {
 
 .form-container{
     display: flex;
-    width: 370px;
+    min-width: 15rem;
+    max-width: 25rem;
     height: auto;
     flex-direction: column;
     align-items: center;
@@ -55,17 +56,8 @@ form{
     justify-content: center;
 }
 
-input.ct, input.pd {
-    width: 100%;
-    padding: 10px;
-    font-size: 20px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-}
-
 .contra, .password {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     font-size: 20px;
     margin: 10px 0;
@@ -128,7 +120,8 @@ input.ct, input.pd {
 
 .register{
     display: none;
-    width: 370px;
+    min-width: 15rem;
+    max-width: 25rem;
     height: auto;
     font-family: Arial, sans-serif;
     flex-direction: column;
@@ -170,7 +163,7 @@ h2 a{
 }
 
 .fecha{
-    width: 100%;
+    width: 80%;
     padding: 10px;
     margin: 10px 0;
     font-size: 20px;

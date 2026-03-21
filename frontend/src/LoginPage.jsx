@@ -128,11 +128,10 @@ export default function LoginPage() {
                   required
                   placeholder="Password"
                   autoComplete="current-password"
-                  style={{ width: '100%' }}
                 />
                 <button
                   type="button"
-                  style={{ position: 'absolute', right: '5px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: '#3e98bf', display: 'flex', alignItems: 'center'}}
+                  style={{ position: 'absolute', right: '25px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: '#3e98bf', display: 'flex', alignItems: 'center'}}
                   onClick={() => setShowPasswordLogin((v) => !v)}
                   tabIndex={-1}
                   aria-label={showPasswordLogin ? 'Ocultar contraseña' : 'Mostrar contraseña'}
@@ -159,11 +158,11 @@ export default function LoginPage() {
         ) : (
           <div className="register" key="register-form" style={{ display: 'flex' }}>
             <h2>
-              <a href="index.html">login-Wed</a>
+              <a href="index.html">Login-Wed</a>
             </h2>
             <form onSubmit={handleRegisterSubmit} autoComplete="on">
                 <div style={{ position: 'relative', width: '220px', margin: '0 auto' }} >
-                    <input className="contra" type="email" id="correo" required name="correo" placeholder="Correo" autoComplete="email" />
+                    <input className="contra" type="email" id="correo" required name="correo" placeholder="Username" autoComplete="email" />
                 </div>
               <div style={{ position: 'relative', width: '220px', margin: '0 auto' }}>
                 <input
@@ -172,13 +171,12 @@ export default function LoginPage() {
                   id="contraseña"
                   required
                   name="contraseña"
-                  placeholder="Contraseña"
+                  placeholder="Password"
                   autoComplete="new-password"
-                  style={{ width: '100%' }}
                 />
                 <button
                   type="button"
-                  style={{ position: 'absolute', right: '5px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: '#3e98bf', display: 'flex', alignItems: 'center'}}
+                  style={{ position: 'absolute', right: '25px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: '#3e98bf', display: 'flex', alignItems: 'center'}}
                   onClick={() => setShowPasswordRegister((v) => !v)}
                   tabIndex={-1}
                   aria-label={showPasswordRegister ? 'Ocultar contraseña' : 'Mostrar contraseña'}
