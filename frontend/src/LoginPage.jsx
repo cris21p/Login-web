@@ -94,7 +94,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className={darkMode ? 'body-login' : 'body-login'} style={{ backgroundColor: darkMode ? '#333' : '#fff' }}>
+    <div className={darkMode ? 'body-login' : 'body-login'} style={{ backgroundColor: darkMode ? '#333' : '#d2d2d243' }}>
       <main className="login">
         <div className="form-check form-switch pt-sw">
           <input
@@ -105,7 +105,7 @@ export default function LoginPage() {
             onChange={handleModeChange}
           />
           <p className="p" style={{ color: darkMode ? '#ffffffb1' : '#2222229f' }}>
-            {darkMode ? 'Modo Oscuro' : 'Modo Claro'}
+            {darkMode ? 'Oscuro' : 'Claro'}
           </p>
           <label className="form-check-label" htmlFor="checkNativeSwitch"></label>
         </div>
